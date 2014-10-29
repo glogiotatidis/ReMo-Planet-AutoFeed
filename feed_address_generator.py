@@ -3,6 +3,7 @@ import requests
 
 BASE_URL = 'https://reps.mozilla.org'
 URL = '/api/v1/rep/?format=json&limit=20'
+ALLOWED_CATEGORIES = ['remo', 'reps', 'mozillareps', 'mozilla-reps']
 
 
 def main():
@@ -38,6 +39,9 @@ def main():
         print '[%s]' % entry['feed']
         print 'name = %s' % entry['name']
         print 'avatar = %s' % entry['avatar']
+        print 'filters = filter_categories.py'
+        print 'filter_categories = %s' % ','.join(ALLOWED_CATEGORIES)
+
         print ''
 
 
