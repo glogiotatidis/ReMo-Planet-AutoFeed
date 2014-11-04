@@ -21,7 +21,8 @@ def main():
                 entries.append({
                     'feed': feed,
                     'name': item['fullname'],
-                    'avatar': item['profile']['avatar_url']
+                    'avatar': item['profile']['avatar_url'],
+                    'allowed_categories': ALLOWED_CATEGORIES,
                     })
 
         new_url = data['meta'].get('next', None)
@@ -33,6 +34,7 @@ def main():
         'feed': 'https://blog.mozilla.org/mozillareps/feed/',
         'name': 'Official Reps Blog',
         'avatar': 'https://reps.mozilla.org/static/base/img/remo/remo_logo_medium.png',
+        'allowed_categories': [],
     })
 
     for entry in entries:
@@ -40,7 +42,7 @@ def main():
         print 'name = %s' % entry['name']
         print 'avatar = %s' % entry['avatar']
         print 'filters = filter_categories.py'
-        print 'filter_categories = %s' % ','.join(ALLOWED_CATEGORIES)
+        print 'filter_categories = %s' % ','.join(entry['allowed_categories'])
 
         print ''
 
