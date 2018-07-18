@@ -33,7 +33,7 @@ def main():
     entries.append({
         'feed': 'https://blog.mozilla.org/mozillareps/feed/',
         'name': 'Official Reps Blog',
-        'avatar': 'https://reps.mozilla.org/static/base/img/remo/remo_logo_medium.png',
+        'avatar': 'https://reps.mozilla.org/static/base/img/remo/remo_avatar.png',
         'allowed_categories': [],
     })
 
